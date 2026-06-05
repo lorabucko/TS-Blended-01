@@ -1,8 +1,9 @@
 export { };
-const name: string = "Alice";
-const age: number = 30;
-const isOnline: boolean = true;
-
-console.log(`Name: ${name}`);
-console.log(`Age: ${age}`);
-console.log(`Online: ${isOnline}`);
+    
+type Settings = { darkMode: boolean; fontSize: number; language: string };
+   
+const settings: Settings = {
+  darkMode: true,
+  fontSize: 16,
+  language: "en",
+};

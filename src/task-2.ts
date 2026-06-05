@@ -1,12 +1,8 @@
-interface Product { 
-   readonly id: number;
-    title: string;
-    description?: string;
-}
-const product: Product = {
-  id: 1,
-  title: "Tablet",
-  description: "Compact and fast",
-};
+type Currency = "USD"|"EUR"|"UAH";
 
-console.log(`Product: ${JSON.stringify(product)}`);
+function convertCurrency({ amount, currency }: {
+  amount: number;
+  currency: Currency;
+}): void { 
+console.log(`Converting ${amount} to ${currency}`);
+}

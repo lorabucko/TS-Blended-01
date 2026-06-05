@@ -1,7 +1,12 @@
-function getFirstElement<T>(arr: T[]): T {
-  return arr[0];
+interface User {
+  name: string;
+  address?: {
+    city: string;
+  };
 }
+const user: User = {
+  name: "Alice",
+  address: { city: "Kyiv" }
+};
 
-getFirstElement<number>([1, 2, 3]);           // 1
-getFirstElement<string>(["a", "b", "c"]);     // "a"
-getFirstElement<boolean>([true, false, true]); // true
+console.log(user.address?.city);
